@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио 3D-работ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+        .categories {
+            display: flex;
+            justify-content: space-around;
+            padding: 40px;
+        }
+        .category {
+            text-align: center;
+            flex: 1;
+        }
+        .category a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        .category img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .category img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>Мои 3D-работы</header>
+    
+    <div class="categories">
+        <div class="category">
+            <a href="completed.html">
+                <img src="images/Completed/Robot.jpg" alt="Завершенные работы">
+                <div>Завершенные работы</div>
+            </a>
+        </div>
+        <div class="category">
+            <a href="in_progress.html">
+                <img src="images/in_progress/Door.png" alt="В процессе">
+                <div>В процессе</div>
+            </a>
+        </div>
+        <div class="category">
+            <a href="unfinished.html">
+                <img src="images/unfinished/NEOTOKYO.png" alt="Не доделанные">
+                <div>Заброшенные</div>
+            </a>
+        </div>
+    </div>
+    
+    <footer>
+        Контакты: mikha91102@gmail.com
+    </footer>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завершенные работы</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+        .project {
+            margin: 20px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .gallery img {
+            width: 300px;
+            height: auto;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+        .modal.show {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <header>Завершенные работы</header>
+    
+    <div class="project">
+        <h3>Персонаж 1</h3>
+        <div class="gallery">
+            <img src="completed/character1/render.jpg" alt="1" onclick="openModal(this.src)">
+            <img src="completed/character1/normal_map.jpg" alt="2" onclick="openModal(this.src)">
+        </div>
+    </div>
+    <div class="project">
+        <h3>Персонаж 2</h3>
+        <div class="gallery">
+            <img src="completed/character2/render.jpg" alt="1" onclick="openModal(this.src)">
+            <img src="completed/character2/concept.jpg" alt="2" onclick="openModal(this.src)">
+        </div>
+    </div>
+    
+    <div class="modal" id="modal" onclick="closeModal()">
+        <img id="modalImg" src="" alt="">
+    </div>
+    
+    <footer>
+        <a href="index.html">Назад</a>
+    </footer>
+
+    <script>
+        function openModal(src) {
+            document.getElementById('modalImg').src = src;
+            document.getElementById('modal').classList.add('show');
+        }
+        function closeModal() {
+            document.getElementById('modal').classList.remove('show');
+        }
+    </script>
+</body>
+</html>
